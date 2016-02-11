@@ -17,3 +17,5 @@ cp target/stash-pr-poller*.jar dist/
 mvn clean install -DskipTests -P gerrit.cs
 cp target/gerrit-cs-poller*.jar dist/
 
+mvn clean install -DskipTests -P gitlab.mr
+cp target/gitlab-mr-poller*.jar dist/

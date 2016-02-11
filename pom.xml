@@ -87,16 +87,24 @@
                 <resource.directory>src/main/resources/gerrit</resource.directory>
             </properties>
         </profile>
+        <profile>
+            <id>gitlab.mr</id>
+            <properties>
+                <plugin.name>gitlab-mr-poller</plugin.name>
+                <resource.directory>src/main/resources/gitlab</resource.directory>
+            </properties>
+        </profile>
     </profiles>
 
     <build>
-        <finalName>${plugin.name}-${version}</finalName>
+        <finalName>${plugin.name}-${project.version}</finalName>
         <resources>
             <resource>
                 <directory>src/main/resources/views</directory>
             </resource>
             <resource>
                 <directory>${resource.directory}</directory>
+                <filtering>true</filtering>
             </resource>
         </resources>
 
